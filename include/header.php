@@ -21,7 +21,7 @@
 				<div class="innerNav" id="toogleNav">
 					<a href="index.php">Home</a>
 
-					<?php if($_SERVER['SCRIPT_NAME'] == "/Tubes_Benginpro/index.php"){ ?>
+					<?php if($_SERVER['SCRIPT_NAME'] == "/"){ ?>
 					<a href="#products" class="animate">Products</a>
 					<a href="#contact" class="animate">Contact us</a>
 					<?php } ?>
