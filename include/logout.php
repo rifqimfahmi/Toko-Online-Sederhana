@@ -3,5 +3,5 @@
 	session_destroy();
 	session_unset();
 
-	header("Location: /Tubes_Benginpro");
+	header("Location: /index.php");
 ?>	
