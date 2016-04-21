@@ -1,9 +1,9 @@
 <?php
 	class database {
-		private static $dbName = "products";
-		private static $dbHost = "localhost";
-		private static $dbUname = "root";
-		private static $dbPassword = "";
+		private static $dbName = "acsm_ab1118c255d9c37";
+		private static $dbHost = "us-cdbr-azure-southcentral-e.cloudapp.net";
+		private static $dbUname = "b68a57d9b1d0b8";
+		private static $dbPassword = "e17c5326";
 
 		public function __construct(){
 			die("Init function is not allowed");
