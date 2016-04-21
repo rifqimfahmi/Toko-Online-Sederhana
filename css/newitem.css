@@ -1,0 +1,44 @@
+.form {
+	width: 40%;
+	margin: 50px auto;
+	margin-top: 100px;
+}
+.innerForm {
+	display: flex;
+	flex-direction: column;
+}
+input,
+textarea {
+	border-radius: 2px;
+	border: 2px solid #ccc;
+	padding: 8px 10px;
+}
+label {
+	margin-bottom: 5px;
+	font-size: .87em;
+}
+.btnSell {
+	cursor: pointer;
+	background-color: teal;
+	border: none;
+	padding: 10px 0;
+	color: aliceblue;
+	border-bottom: 2px solid #006262;
+	margin-top: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+	transition: .3s;
+}
+.btnSell:hover {
+	background-color: #006b6b;
+	border: none;
+}
+.warning {
+	color: tomato;
+	margin-bottom: 10px;
+}
+textarea {
+	font-family: 'Roboto', sans;
+}
+.toDelImg {
+	margin-top: 20px;
+}

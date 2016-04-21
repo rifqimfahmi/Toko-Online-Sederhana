@@ -1,0 +1,417 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Roboto', serif;
+	background-color: aliceblue;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+/*********************
+		Header
+*********************/
+.header {
+	margin-bottom: 50px;
+}
+.logo {
+	width: 100%;
+	background-color: aliceblue;
+}
+.logoInner {
+	width: 30%;
+	max-width: 100px;
+	display: block;
+	margin: auto;
+	padding: 30px 0px;
+}
+.navigation {
+	width: 100%;
+	background-color: coral;
+	position: relative;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+}
+.menu {
+	width: 100%;	
+	display: block;
+}
+.navBut {
+	color: aliceblue;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 13px 0;
+	font-size: 1.2em;
+	transition: background-color .3s;
+}
+.navBut:hover {
+	background-color: #ff5b29;
+}
+.innerNav {
+	border: 2px solid coral;
+	display: none;
+	border-top: none;
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+}
+.innerNav a {
+	display: block;
+	background-color: aliceblue;
+	color: #161515;
+	padding: 15px 0 15px 25px;
+	font-size: 1em;
+	transition: background-color .4s;
+}
+.innerNav a:hover {
+	background-color: #e2e2e2;
+}
+.show {
+	display: block;
+}
+
+/*********************
+		Product
+*********************/
+.featuredProduct {
+	width: 90%;
+	margin: auto;
+}
+.headProduct {
+	text-align: left;		
+}
+.headProduct h2 {
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.headInner + a.previewPriceButton {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contactPreview {
+	margin-top: 20px;
+}
+.contactPreview table tr td p {
+	line-height: .2em;
+}
+.contactPreview table tr td {
+	padding: 5px 10px 10px 0;
+}
+.ud {
+	margin-bottom: 20px;
+}
+
+
+/*********************
+		Footer
+*********************/
+
+.footer {
+	width: 100%;
+	background-color: coral;
+	color: aliceblue;
+	text-align: center;	
+	padding: 40px 0;
+	font-size: .9em;
+	margin-top: 0;
+	clear:both;
+}
+.toTop {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/up-1.png");
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+/*********************
+		content
+*********************/
+
+.content {
+	margin-bottom: 0;
+	min-height: calc(100vh - 100px);
+}
+
+/*********************
+		Contact Us
+*********************/
+
+.contactus {
+	height: 100vh;
+	background-image: url("../img/contact-us.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 80px;
+	margin-bottom: 0;
+}
+.innerContact {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0, .9), rgba(0,0,0, .9))
+}
+.superInnerContact {
+	color: #fff;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	height: calc(100vh - 120px);
+	padding-top: 50px;
+}
+.superInnerContact h2 {
+	font-size: 3em;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.medSoc {
+	height: 100%;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px 5px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.facebookInner,
+.twitterInner,
+.emailInner {
+	width: 70%;
+	display: inline-block;
+	clear: both;
+	text-align: center;
+}
+
+
+
+/*********************
+		featured
+*********************/
+.featured {
+	width: 90%;
+	margin: auto;
+}
+.featured h2 {
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+.productDesc p {
+	font-size: .9em;
+	line-height: 1.4em;
+	margin: 15px 0;
+}
+.productDesc {
+	margin: 10px 0 25px 0;
+}
+.productDesc h3 {
+	margin-bottom: 10px;
+}
+.priceButton {
+	display: block;
+	color: aliceblue;
+	background-color: limegreen;
+	text-align: center;
+	padding: 20px 0;
+	margin-bottom: 50px;
+	border-radius: 10px;
+}
+.head img {
+	padding: 15px;
+	border: 1px solid limegreen;
+	width: 100%;
+	max-width: 600px;
+}
+.head {
+	text-align: center;
+}
+
+
+/*********************
+		Delete
+*********************/
+
+.delete {
+	width: 100%;
+	padding: 20px 25px;
+	background-color: teal;
+	color: aliceblue;
+	border-radius: 2px;
+}
+.updateButton,
+.deleteButton {
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 5px;
+	color: aliceblue;
+}
+.updateButton {
+	margin-bottom: 10px;
+	background-color: lightslategray;
+}
+.deleteButton {
+	background-color: crimson;
+}
+.confirmation a {
+	color: aliceblue;
+	padding: 10px 25px;
+	border-radius: 2px;
+}
+.deleteProcess {
+	background-color: crimson;
+	margin-right: 0;
+}
+.delete {
+	margin-bottom: 20px
+}
+.back {
+	background-color: slategrey;
+}
+
+/*********************
+		Responsive
+*********************/
+@media screen and (min-width: 560px){
+	.facebook,
+	.twitter,
+	.email {
+		display: inline;
+		width: 50%;
+	}
+	.facebookInner,
+	.twitterInner,
+	.emailInner {
+		width: 70%;
+		display: inline-block;
+		text-align: center;
+	}
+	.twitter{
+		margin: 0;
+	}
+
+	.superInnerContact h2 {
+		margin-bottom: 50px;
+	}
+
+}
+
+@media screen and (min-width: 480px){
+	.imageContainer {
+		width: 42%;
+		display: inline-block;
+		margin: 0 3.7%;
+		padding: 0;	
+}
+	.head img {
+		padding: 9px;
+	}
+	.navBut {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.innerNav {
+		display: block;
+		background-color: coral;
+		border: none;
+		display: flex;
+		justify-content: center;
+	}
+	.innerNav a {
+		background-color: coral;
+		padding: 15px 25px;
+		font-size: 1em;
+		margin: 0;
+		color: aliceblue;
+		border-right: 1px solid #f2f2f2;
+	}
+	.innerNav a:hover {
+		color: black;
+	}
+	.content {
+		margin-top: 100px;
+	}
+	.imageContainer a {
+		padding: 12px 0;
+	} 
+	.productDesc p {
+		font-size: .9em;
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 690px){
+	.head.head2 {
+		width: 50%;
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: top;
+	}
+	.headProduct h2 {
+	margin-top: 0;
+}
+	.previewDesc {
+		width: 47%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.ud {
+		width: 50%;
+		margin-left: auto;
+		margin-bottom: 20px;
+	}
+	.ud:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.ud a {
+		display: inline-block;
+		width: 30%;
+		float: right;
+	}
+	.ud a:last-child {
+		margin-right: 10px;
+	}
+}
+
+
+@media screen and (min-width: 859px ){
+	.imageContainer {
+		width: 29.33333%;
+		margin: 0 1.7%;
+	}
+	.featured {
+		width: 85%;
+	}
+	.facebookInner,
+	.twitterInner,
+	.emailInner {
+		width: 60%;
+		display: inline-block;
+		text-align: center;
+		max-width: 150px;
+	}
+}
