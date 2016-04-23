@@ -1,19 +1,39 @@
-<!DOCTYPE html>
-<html>
-	<?php 
+<?php
+
 	include "include/session.php";
 	include "include/header.php";
 	include "database.php";
-	 ?>
-	
+
+	$database = database::connect();
+	$query = "SELECT * FROM product";
+
+	if(!empty($_GET)){
+		$search = "%".$_GET['search']."%";
+	} else {
+		$search = "%";
+	}
+	$query .= " WHERE title LIKE :search ORDER BY id DESC";
+
+
+	$prepare = $database->prepare($query);
+	$prepare->bindParam(":search", $search);
+	$prepare->execute();
+
+?>
+
+
+<!DOCTYPE html>
+<html>
 		<div class="content">
+			<div class="search">
+				<form class="innerSearch" method="get">
+					<input type="text" name="search" class="search" placeholder="Find action figure" value="<?php echo !empty($_GET['search'])?$_GET['search']:"" ?>"></input>
+					<input type="submit" value="Find"></input>
+				</form>
+			</div>
 		    <div class='featured' id="products">
 		    <h2>Weeaboo Products</h2>
 		    <?php
-		    	$database = database::connect();
-		    	$query = "SELECT * FROM product ORDER BY id DESC";
-		    	$prepare = $database->prepare($query);
-		    	$prepare->execute();
 		    	foreach ($prepare as $data) {
 		    		include "preview.php";
 		    	}
