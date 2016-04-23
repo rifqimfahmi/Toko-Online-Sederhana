@@ -14,6 +14,23 @@ img {
 	max-width: 100%;
 }
 /*********************
+		Search
+*********************/
+
+.search {
+	margin-bottom: 10px;
+	text-align: center;
+}
+.search > .innerSearch > input[type="text"]{
+	text-align: left;
+	padding: 10px 10px;
+}
+.search > .innerSearch > input[type="submit"]{
+	padding: 10px 25px;
+}
+
+
+/*********************
 		Header
 *********************/
 .header {
