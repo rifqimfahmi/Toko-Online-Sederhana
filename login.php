@@ -49,7 +49,7 @@
 					$getData = $prepare->fetch(PDO::FETCH_ASSOC);
 
 					$_SESSION['admin'] = $getData['id'];
-					header("Location: createproduct.php");
+					header("Location: index.php");
 				} else{
 					echo "<script> alert('Invalid Username or Password'); </script>";
 				}
