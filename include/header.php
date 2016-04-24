@@ -12,7 +12,7 @@
 	<div class='header'>
 		<div class="wrapper">
 			<div class='logo'>
-				<img src="img/logo.svg" class="logoInner">
+				<a href="/"><img src="img/logo.svg" class="logoInner"></a>
 			</div>
 			<div class='navigation'>
 				<div class='menu' onclick="openMenu()">
