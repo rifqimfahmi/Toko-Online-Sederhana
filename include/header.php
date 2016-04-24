@@ -22,10 +22,13 @@
 					<a href="index.php">Home</a>
 
 					<?php if($_SERVER['SCRIPT_NAME'] == "/Tubes_Benginpro/index.php"){ ?>
-					<a href="#products" class="animate">Products</a>
-					<a href="#contact" class="animate">Contact us</a>
+						<a href="#products" class="animate">Products</a>
+						<a href="#contact" class="animate">Contact us</a>
+					<?php } if(!empty($_SESSION["admin"])){ ?>
+						<a href="createproduct.php">Add item</a>
+					<?php } else { ?>
+						<a href="login.php">Admin</a>
 					<?php } ?>
-					<a href="createproduct.php">Add Item</a>
 					<?php
 					if(!empty($_SESSION['admin'])) {
 					 	echo '<a href="include/logout.php">Logout</a>';
