@@ -242,6 +242,9 @@ img {
 .productDesc h3 {
 	margin-bottom: 10px;
 }
+.productDesc > h3 > a {
+	color: #000;
+}
 .priceButton {
 	display: block;
 	color: aliceblue;
@@ -369,7 +372,7 @@ img {
 	.content {
 		margin-top: 100px;
 	}
-	.imageContainer a {
+	.imageContainer a.priceButton {
 		padding: 12px 0;
 	} 
 	.productDesc p {
