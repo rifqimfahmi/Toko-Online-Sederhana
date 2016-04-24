@@ -9,11 +9,11 @@
 ?>
 <div class='imageContainer'>
 	<div class="head">
-	<img src="<?php echo $image; ?>">
+	<a href="product.php?id=<?php echo $id; ?>"><img src="<?php echo $image; ?>" ></a>
 	<!-- 	<img src="img/anime-1.jpg"> -->
 	</div>
 	<div class="productDesc">
-	<h3><?php echo $title ?></h3>
+	<h3><a href="product.php?id=<?php echo $id; ?>" ><?php echo $title ?></a></h3>
 	<!--<h3>Yowamushi Pedal | Obito</h3> -->
 	
 	<p><?php echo $lessDescription; ?></p>
