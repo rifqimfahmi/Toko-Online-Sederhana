@@ -7,17 +7,22 @@
 	$database = database::connect();
 	$query = "SELECT * FROM product";
 
-	if(!empty($_GET)){
+	if(!empty($_GET['search'])){
 		$search = "%".$_GET['search']."%";
 	} else {
 		$search = "%";
 	}
-	$query .= " WHERE title LIKE :search ORDER BY id DESC";
+		$currentPage = !empty($_GET['page']) ? $_GET["page"] : 1 ;
+		$start = !empty($_GET['page']) ? ($_GET["page"]- 1) * 6 : 0 ;
+		$end = !empty($_GET['page']) ? $_GET["page"] * 6 : 6;
+		$query .= " WHERE title LIKE :search ORDER BY id DESC LIMIT :start, :end";
 
 
-	$prepare = $database->prepare($query);
-	$prepare->bindParam(":search", $search);
-	$prepare->execute();
+		$prepare = $database->prepare($query);
+		$prepare->bindParam(":search", $search);
+		$prepare->bindParam(":start", $start, PDO::PARAM_INT);
+		$prepare->bindParam(":end", $end, PDO::PARAM_INT);
+		$prepare->execute();
 
 ?>
 
@@ -37,9 +42,34 @@
 		    	foreach ($prepare as $data) {
 		    		include "preview.php";
 		    	}
-
+		    database::disconnect();
 		    ?>
-		</div>
+		    <div class="paginator">
+		    	<?php
+
+		    		$database = database::connect();
+		    		$query = "SELECT COUNT(id) as total_product FROM product";
+		    		$prepare = $database->prepare($query);
+		    		$prepare->execute();
+		    		$data = $prepare->fetch(PDO::FETCH_ASSOC);
+		    		$totalProduct = $data['total_product'];
+		    		$totalPage = intval($totalProduct / 6);
+		    		if($totalProduct % 6 != 0){
+		    			$totalPage += 1;
+		    		}
+
+		    		for( $i = 1; $i <= $totalPage; $i++ ){
+		    			$class = "";
+		    			if($currentPage == $i){
+		    				$class = " class=onPage";
+		    			}
+		    			echo "<a href='?page=".$i."'".$class.">".$i."</a>";
+		    		}
+
+
+		    	?>
+		    </div>
+			</div>
 		    <div class="contactus" id="contact">
 		    	 <div class="innerContact">
 		    	 	<div class="superInnerContact">

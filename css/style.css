@@ -132,6 +132,24 @@ img {
 
 
 /*********************
+		Paginator
+*********************/
+.paginator {
+	text-align: center;
+}
+.paginator > a {
+	color: #020202;
+	padding: 5px 15px;
+	transition: .3s background-color;
+}
+.paginator > a:hover {
+	background-color: tomato;
+}
+.paginator > a.onPage {
+	background-color: tomato;
+	color: aliceblue;
+}
+/*********************
 		Footer
 *********************/
 
