@@ -144,6 +144,7 @@ img {
 }
 .paginator > a:hover {
 	background-color: tomato;
+	color: aliceblue;
 }
 .paginator > a.onPage {
 	background-color: tomato;
