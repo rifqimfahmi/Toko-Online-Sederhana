@@ -1,6 +1,7 @@
 <?php
 	include "database.php";
 	include "uploader.php";
+	include "include/session.php";
 
 	if(isset($_SESSION['admin'])){
 		if(isset($_GET)){
