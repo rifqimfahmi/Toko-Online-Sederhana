@@ -76,8 +76,13 @@ img {
 	display: none;
 	border-top: none;
 	position: absolute;
-	z-index: 9999;
+	z-index: 9999999;
 	width: 100%;
+}
+#container {
+	width: 80%;
+	margin: auto;
+	padding-top: 100px;
 }
 .innerNav a {
 	display: block;
@@ -436,7 +441,7 @@ img {
 }
 
 
-@media screen and (min-width: 859px ){
+@media screen and (min-width: 860px ){
 	.imageContainer {
 		width: 29.33333%;
 		margin: 0 1.7%;

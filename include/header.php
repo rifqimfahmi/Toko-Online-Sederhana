@@ -27,6 +27,7 @@
 						<a href="#contact" class="animate">Contact us</a>
 					<?php } if(!empty($_SESSION["admin"])){ ?>
 						<a href="createproduct.php">Add item</a>
+						<a href="dataproduk.php">Products Chart</a>
 					<?php } else { ?>
 						<a href="login.php">Admin</a>
 					<?php } ?>
