@@ -30,6 +30,7 @@
 						<a href="dataproduk.php">Products Chart</a>
 					<?php } else { ?>
 						<a href="login.php">Admin</a>
+						<a href="table">table</a>
 					<?php } ?>
 					<?php
 					if(!empty($_SESSION['admin'])) {
