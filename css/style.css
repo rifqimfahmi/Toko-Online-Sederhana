@@ -5,7 +5,7 @@
 }
 body {
 	font-family: 'Roboto', serif;
-	background-color: pink;
+	background-color: aliceblue;
 }
 a {
 	text-decoration: none;
@@ -72,7 +72,7 @@ img {
 	background-color: #ff5b29;
 }
 .innerNav {
-	border: 2px solid red;
+	border: 2px solid coral;
 	display: none;
 	border-top: none;
 	position: absolute;
