@@ -22,7 +22,7 @@
 				<div class="innerNav" id="toogleNav">
 					<a href="index.php">Home</a>
 
-					<?php if($_SERVER['SCRIPT_NAME'] == "/index.php"){ ?>
+					<?php if($_SERVER['SCRIPT_NAME'] == "/Tubes_Benginpro/index.php"){ ?>
 						<a href="#products" class="animate">Products</a>
 						<a href="#contact" class="animate">Contact us</a>
 					<?php } if(!empty($_SESSION["admin"])){ ?>
@@ -30,7 +30,6 @@
 						<a href="dataproduk.php">Products Chart</a>
 					<?php } else { ?>
 						<a href="login.php">Admin</a>
-						<a href="table">table</a>
 					<?php } ?>
 					<?php
 					if(!empty($_SESSION['admin'])) {
