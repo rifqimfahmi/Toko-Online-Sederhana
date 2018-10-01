@@ -50,7 +50,7 @@
 					    	<table>	 
 					    		<tr>
 					    			<td><p>Tel / Whatsapp </p></td>
-					    			<td>:  081297886730</td>
+					    			<td>:  081384726848</td>
 					    		</tr>
 					    		<tr>
 					    			<td><p>Line</p></td>
